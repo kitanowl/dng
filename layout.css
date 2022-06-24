@@ -1,0 +1,505 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  font-family: corbel;
+  padding: 10px;
+  background-color: lavender;
+}
+.header {
+  font-family: corbel;
+  font-size:30px;
+  color:indigo;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.header h1 {
+  font-family:courier;
+  font-size: 50px;
+  weight:bold;
+}
+
+.card h2 {
+color:indigo;
+}
+
+.card h5 {
+color: thistle;
+}
+
+.card p {
+text-align: justify;
+color: indigo;
+}
+
+.card a:link {
+color: thistle;
+}
+
+:card a:visited {
+color: indigo;
+}
+
+/* navigation */
+.topnav {
+  overflow: visible;
+  background-color: indigo;
+}
+
+/* navigation links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* link color */
+.topnav a:hover {
+  background-color: #e6e6fa;
+  color: indigo;
+}
+
+.topnav .icon{
+    display:none;
+}
+
+@media screen and (max-width: 600px)
+{
+.topnav a:not(:first-child)
+{display:none;}
+.topnav a.icon {
+float:right;
+display:block;
+}
+}
+
+@media screen and (max-width:600px)
+{
+    .topnav.responsive {position:
+    relative;}
+    .topnav.responsive .icon{
+    position: absolute;
+    right:0;
+    top:0;
+}
+    .topnav.responsive a{
+    float:none;
+    display:block;
+    text-aligh:left;
+    }
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: indigo;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: lavender;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: white;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* dropdown menu */
+.dropdown {
+  position:relative;
+  display:inline-block;
+ }
+
+ /* dropdown button*/
+.dropbtn {
+    text-decoration: none;
+    background-color: indigo;
+    color: white;
+    font-family: corbel;
+    font-size:18px;
+    padding: 14px 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+ /* dropdown content*/
+ .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: lavender;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+
+/* dropdown link*/
+.dropdown-content a {
+    color: indigo;
+    display: block;
+}
+
+/* dropdown button hover*/
+.dropbtn:hover {
+  background-color:lavender;
+  color: indigo;
+}
+
+/*dropdown content hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    margin:auto;
+}
+
+.dropdown-content a:hover {
+  display: block;
+  margin: auto;
+  background-color: thistle;
+  }
+
+/* two cols */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: lavender;
+  padding-left: 20px;
+}
+
+/* images */
+.img {
+  width: auto;
+  height: 300px;
+  display:block;
+  background-size:cover;
+}
+
+.gallery {
+    margin: 10px;
+    padding:10px 10px;
+    border: none;
+    display:inline-block;
+    width:25%;
+}
+
+.gallery img{
+    width: 100%;
+    height: auto;
+}
+
+.gallery:hover{
+    border: 1px solid thistle;
+    background:thistle;
+}
+/* article card */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* clear float */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* footer */
+.footer {
+  color:white;
+  padding: 20px;
+  text-align: center;
+  background: indigo;
+  margin-top: 20px;
+}
+
+/* screen size smaller than 800px */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* screen size smaller than 400px */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+<style>
+        .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+<style>
+        .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}

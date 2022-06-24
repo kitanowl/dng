@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>More is better, right?</title>
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    <script type="text/javascript">
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</head>
+<body>
+<div class="header">
+  <h1>What's more</h1>
+  <p><i>I am going to show you an angle</i></p>
+</div>
+<div class="topnav">
+  <a href="Intro.html">Where are you?</a>
+  <a href="CV.html">What am I?</a>
+  <div class="dropdown">
+    <button class="dropbtn">What are you looking for?</button>
+    <div class="dropdown-content">
+      <a href="some words.html">Some words?</a>
+      <a href="gallery.html">Some pictures?</a>
+      <a href="#">Or some songs?</a>
+    </div>
+  </div>
+  <a href="what's more.html" >And more?</a>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="web_layout.html">Homepage</a>
+</div>
+<span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <h2>Philippe Jaroussky demonstrates his baritone & sings a cappella</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/T1-ttyTq32U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="rightcolumn">
+        <div class="card">
+        <h2>Voici un petit vidéo de Philippe à la télé</h2>
+        <p>où il demonte son technique </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

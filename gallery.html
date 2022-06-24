@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Great Gallery</title>
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    <style>
+        ul.page {
+        display: inline-block;
+        padding:0;
+        margin:0;
+        }
+        ul.page li {
+        display: inline;
+        }
+        ul.page li a{
+        color:thistle;
+        float:left;
+        padding:8px 16px;
+        text-decoration: none;
+        }
+        ul.page li a.active {
+        background-color:black;
+        color:white;
+        }
+        ul.page li a:hover:not(.active){
+        background-color:lavender;
+        color:indigo;
+        }
+
+        </style>
+
+</head>
+<body>
+<div class="header">
+  <h1>The great gallery</h1>
+  <p><i>The most extravaganza collection in the entire world!</i></p>
+</div>
+<div class="topnav">
+  <a href="Intro.html">Where are you?</a>
+  <a href="CV.html">What am I?</a>
+  <div class="dropdown">
+    <button class="dropbtn">What are you looking for?</button>
+    <div class="dropdown-content">
+      <a href="some words.html">Some words?</a>
+      <a href="gallery.html">Some pictures?</a>
+      <a href="#">Or some songs?</a>
+    </div>
+  </div>
+  <a href="what's more.html" >And more?</a>
+    <a href="web_layout.html">Homepage</a>
+</div>
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <h2>Part of the giant's collection</h2>
+            <h5>Click the picture to open it on full display</h5>
+            <div class="gallery">
+                    <a target="_blank" href="image/penguin.png">
+                    <img src="image/penguin.png" alt="penguin" width="300" height="200">
+                    </a>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="image/Nuit étoilée.jpg">
+                <img src="image/Nuit étoilée.jpg" alt="stary sky" width="300" height="200">
+                </a>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="image/sizewell.jpg">
+                    <img src="image/sizewell.jpg" alt="sizewell" width="300" height="200" >
+                </a>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="image/ciel.jpg">
+                    <img src="image/ciel.jpg" alt="cloudy sky" width="300" height="200">
+                </a>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="image/angel.jpg">
+                    <img src="image/angel.jpg" alt="angel" width="300" height="200">
+                </a>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="image/PA.png">
+                    <img src="image/PA.png" alt="pa" width="300" height="200">
+                </a>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="image/SGCE1.jpg">
+                    <img src="image/SGCE1.jpg" alt="St.Giles Cathedral" width="300" height="200">
+                </a>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="image/SGCE2.jpg">
+                    <img src="image/SGCE2.jpg" alt="St.Giles Cathedral" width="300" height="200" >
+                </a>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="image/pony.jpg">
+                    <img src="image/pony.jpg" alt="pony" width="300" height="200" >
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="rightcolumn">
+        <div class="card">
+            <h2>Editor's choice</h2>
+            <h5>My favorite picture on this page</h5>
+            <p>Click to see the description</p>
+            <img loading="lazy" id="myImg" src="image/sizewell.jpg" alt="A picture of my favorite nuclear plant, Sizewell power station. This one on picture is Sizewell 2. I like it for its futurist style. Don't you see that dome?" height=auto width="300px">
+            <div id="myModal" class="modal">
+                <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+            <script src="pop.js">
+    </script>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="footer">
+    <ul class="page">
+                <li><a class="active" href="gallery.html">1</a> </li>
+                <li><a href="gallery2.html">2</a> </li>
+                <li><a href="gallery3.html">3</a> </li>
+    </ul>
+</div>
+</body>
+</html>
